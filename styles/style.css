@@ -1,16 +1,47 @@
 .container {
-	display: grid;
-	height: 100vh;
-	grid-template-rows: min-content repeat(5, min-content) 23vh;
-	grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  display: grid;
+  height: 100vh;
+  grid-template-rows: min-content repeat(5, min-content) 23vh;
+  grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(
+      2,
+      [inner-col-start] minmax(min-content, 38vw) [inner-col-end]
+    ) [col-end] minmax(1rem, auto) [full-end];
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(
+        2,
+        [inner-col-start] minmax(min-content, 43vw) [inner-col-end]
+      ) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+@media screen and (max-width: 1500px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(
+        2,
+        [inner-col-start] minmax(min-content, 48vw) [inner-col-end]
+      ) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(
+        2,
+        [inner-col-start] minmax(min-content, 38vw) [inner-col-end]
+      ) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
 
- @media screen and (max-width: 1200px) {
-		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 43vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
- }
- @media screen and (max-width: 1500px) {
-		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 48vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
- }
- @media screen and (min-width: 2000px) {
-		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
- }
+.container__inner {
+	grid-column: col-start/col-end;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;	
+}
+
+img.map, map area{
+	outline: none;
 }
