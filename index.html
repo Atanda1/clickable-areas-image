@@ -293,11 +293,15 @@
         </map>
       </div>
     </div>
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://davidjbradshaw.com/imagemap-resizer/js/imageMapResizer.min.js"></script>
+		<script type="text/javascript">
+
+			$('map').imageMapResize();
+	
+		</script>
     <script>
-			$(document).ready(function(e) {
-    $('img[usemap]').rwdImageMaps();
-});
+			imageMapResize();
 		</script>
   </body>
 </html>
